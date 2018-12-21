@@ -1,0 +1,53 @@
+<!--find/find.wxml-->
+<view class='nav'>
+  <view  class="navList {{currentTab_b==index ? 'active' : ''}}" data-name="{{index}}" wx:for="{{nav}}" bindtap="navbar">
+    {{item}}
+  </view>
+</view>
+<view class='body' hidden="{{currentTab_b!== 1}}">
+  <scroll-view  class='header' scroll-x="true">
+    <view data-idx="{{index}}" class="headerList {{currentTab_a==index ? 'active' : ''}}" wx:for="{{array}}" bindtap="navbarTap">
+      {{item}}
+    </view>
+  </scroll-view>
+    
+  <view class='bkg' hidden="{{currentTab_a!== 0}}">
+    <view class='promo'>
+      <image src='https://i1.bvimg.com/672274/7e9f8a19c2cd5e07.jpg'></image>
+        <text class='promo-text'>雪地地图更新评测：一场追杀与反追杀的游戏</text>
+        <view class='promo-bottom'>
+          <text class='promo-text-left'>绝地求生</text>
+          <block class="promo-text-right">
+            <icon class='promo-text-right-icon' color='#aaaaaa' type="waiting" size='12rpx'></icon>
+            <text>{{5}}小时前</text>
+          </block> 
+        </view>
+        <view class='cover'></view>
+    </view>
+
+    <view class='box-list'wx:for="{{boxList}}">
+      <view class='box-left'>
+        <view class='box-text'>
+          <text class='box-little'>{{item.little}}</text>
+          <view class='box-text-left'>
+            <text id="time" data-name='{{item.time}}'>{{time}}前</text><!--发布时间-->
+            <text class='category'>{{item.category}}</text><!--类别-->
+          </view>
+          <view class='box-text-right'>
+          <image class='browse' src='../img/browse.png'></image>
+          <text>{{item.browse}}</text><!--浏览数-->
+          <image class='comments' src='../img/comments.png'></image>
+          <text>{{item.comment}}</text><!--评论数-->
+          </view>
+        </view>
+      </view>
+      <view class='box-right'>
+        <image src='{{item.promoImg}}' mode='scaleToFill'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+

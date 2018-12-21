@@ -1,0 +1,83 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.nav{
+  position: fixed;
+  float: left;
+  top:40rpx;
+  left: 0rpx;
+  margin: 10rpx 10rpx;
+  padding: 0rpa 5rpx 0rpx 5rpx;
+  color: #727272;
+  z-index: 13;
+}
+.navList{
+  display:block;
+  float: left;
+  width: auto;
+  height: 30rpx;
+  font-size:30rpx;
+  line-height: 30rpx;
+  margin-left: 25rpx;
+  padding: 0 2rpx 18rpx 2rpx;
+  cursor: pointer;
+
+}
+.navList.active{
+  font-size: 38rpx;
+  color: #000;
+  font-weight: 500;
+}
+.body{
+  font-family: tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif;
+  font-size: 20rpx/1.5;
+}
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 3000rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  color: #727272;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 5rpx;
+  white-space: nowrap; /*不换行*/
+  padding: 130rpx 5rpx 2rpx;
+  z-index: 12;
+}
+.headerList{
+  display: block;
+  float: left;
+  width: auto;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size:26rpx;
+  margin-left: 25rpx;
+  padding: 0 2rpx 18rpx 2rpx;
+  cursor: pointer;
+}
+.headerList.active{
+  color: #000;
+  border-bottom: 4rpx #000 solid;
+}
+.Lv{
+  margin: 13rpx 5rpx;
+  float: left;
+  font-size: 15rpx;
+  color: #fff;
+  padding: 2rpx 6rpx;
+  border-radius: 3rpx;
+  background: #b4b4b4;
+}
+
+

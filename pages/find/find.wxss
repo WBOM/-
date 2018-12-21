@@ -1,0 +1,130 @@
+/* find/find.wxss */
+.body{
+  font-family: tahoma,'\5FAE\8F6F\96C5\9ED1',sans-serif;
+  font-size: 20rpx/1.5;
+}
+.bkg{
+  background: rgb(243, 243, 243);
+}
+.promo{
+  display: block;
+  background-size: 100% 300rpx;
+  width: 100%;
+  height: 300rpx;
+  margin: 191rpx 2rpx 5rpx 2rpx;
+}
+.promo image{
+  position: absolute;
+  width: 99.5%;
+  height: 300rpx;
+  border-radius: 10rpx;
+}
+.promo .cover{
+  position: absolute;
+  left: 0;
+  top: 372rpx;
+  margin: 0rpx 2rpx;
+  width: 99.5%;
+  height: 120rpx;
+  background:linear-gradient(rgb(224, 224, 224),#000);
+  opacity: 0.3;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.promo-text{
+  position: relative;
+  font-size: 30rpx;
+  color: #fff;
+  width: 80%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 200rpx;
+  z-index: 11;
+}
+.promo-bottom{
+  display: block;
+  position: relative;
+  margin-top: 10rpx;
+  height: 16rpx;
+  line-height: 16rpx;
+  font-size: 15rpx;
+  color: #cccccc;
+  text-align: center;
+   z-index: 11;
+}
+.promo-text-left,.promo-text-right{
+  margin:0 20rpx;
+}
+.promo-text-right-icon{
+  color: #cccccc;
+  padding-top: 10rpx;
+  margin-right: 8rpx;
+}
+.box-list{
+  background: #fff;
+  display: inline-block;
+  margin: 10rpx 2rpx 0rpx 2rpx;
+  width: 99.5%;
+  height:140rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.box-left{
+  float: left;
+  width: 65%;
+  height: 140rpx;
+}
+.box-right{
+  float: right;
+  width: 35%;
+  height: 140rpx;
+  z-index: 11;
+}
+.box-right image{
+  width: 100%;
+  height: 140rpx;
+}
+.box-text{
+  margin: 0 auto;
+  width: 95%;
+}
+.box-little{
+  display: block;
+  margin-top: 20rpx;
+  font-size: 23rpx;
+  height: 80rpx;
+}
+.box-text-left{
+  float: left;
+}
+.category{
+  margin-left: 15rpx;
+}
+.box-text-left,.box-text-right{
+  height: 20rpx;
+  line-height: 20rpx;
+  color: #cdcdcd;
+  font-size: 14rpx;
+}
+.box-text-left text{
+  margin-top: -5rpx;
+}
+.box-text-right{
+  float: right;
+  position: relative;
+  right: 8rpx;
+}
+.browse, .comments{
+  position: relative;
+  left:0rpx;
+  top: 3rpx;
+  margin: 0 5rpx;
+  width: 16rpx;
+  height: 16rpx;
+  line-height: 16rpx;
+}
+.comments{
+  margin-left: 20rpx;
+}
+

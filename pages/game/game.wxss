@@ -1,0 +1,59 @@
+/* pages/game/game.wxss */
+.heade{
+  padding-bottom: 0;
+}
+.box-list{
+  height: auto;
+  margin: 201rpx 15rpx 0rpx 15rpx;
+}
+.box{
+  display: block;
+  height: 130rpx;
+  width: 98%;
+  margin: 20rpx auto 0;
+  overflow: hidden;
+}
+.box-left{
+  display: block;
+  float: left;
+  width: 260rpx;
+  height: 130rpx;
+}
+.box-left image{
+  width: 100%;
+  height: 130rpx;
+  border-radius: 6rpx;
+}
+.box-right{
+  position: relative;
+  float: right;
+  width: 430rpx;
+  left: 0rpx;
+  display: block;
+  margin-left: 10rpx;
+}
+.gamename{
+  display: inline-block;
+  margin: 20rpx 0 5rpx;
+  font-size: 25rpx;
+}
+.box-right .info{
+  margin: 10rpx 5rpx;
+  height: 40rpx;
+}
+.price{
+  width: auto;
+  display: inline-block;
+  font-size: 19rpx;
+  padding: 2rpx 4rpx;
+  border-radius: 3rpx;
+  background: #e6e6e6;
+  font-weight: 400;
+}
+.score{
+  font-size: 23rpx;
+  float: right;
+  color: #fff;
+  padding: 2rpx 6rpx;
+  border-radius: 3rpx;
+}

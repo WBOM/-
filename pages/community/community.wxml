@@ -1,0 +1,38 @@
+<!--pages/community/community.wxml-->
+<view class='nav'>
+  <view  class="navList {{currentTab_b==index ? 'active' : ''}}" data-name="{{index}}" wx:for="{{nav}}" bindtap="navbar">
+    {{item}}
+  </view>
+</view>
+
+<view class='body' hidden="{{currentTab_b!== 0}}">
+  <view class='header'>
+    <view wx:for='{{postClass}}'  data-idx="{{index}}" class="headerList {{currentTab_a==index ? 'active' : ''}}" bindtap="navbarTap" style='font-size:26rpx'>{{item}}</view>
+  </view>
+  <view class='post-list bkg' hidden="{{currentTab_a!==0}}">
+    <view class='post-box' wx:for='{{postList}}'>
+      <view class='publisher'>
+        <image src='{{item.head}}' mode='scaleToFill'></image>
+        <text class='username'>{{item.username}}</text>
+        <view class='Lv' wx:if="{{item.grade >=13 }}" style=' background: linear-gradient(to right, rgb(254,160,0), rgb(254,138,0));'>Lv:{{item.grade}}</view>
+            <view class='Lv' wx:if="{{item.grade >=12 && item.grade < 10 }}" style='background:linear-gradient(to right,rgb(247,52,255), rgb(229,52,255))'>Lv:{{item.grade}}</view>
+            <view class='Lv' wx:if="{{item.grade < 10 && item.grade > 5 }}" style='background:linear-gradient(to right,rgb(0,189,255),rgb(0,136,254))'>Lv:{{item.grade}}</view>
+            <view class='Lv' wx:if="{{item.grade < 5 && item.grade > 0 }}" style='background:linear-gradient(to right,rgb(174,226,17),rgb(134,213,46)'>Lv:{{item.grade}}</view>
+      </view>
+      <view class='post-content'>
+        <view class='title'>{{item.title}}</view>
+        <view class='content'>
+          <text>{{item.content}}</text>
+          <block wx:if="{{item.img.length}}" style='display:block'>
+            <image  wx:for='{{item.img}}' src='{{item}}' mode='aspectFill'></image>
+          </block>
+          <block wx:else style='display:none'></block>
+        </view>
+        <view class='foot'>
+          <text class='category'>{{item.category}}</text><!--类别-->·
+          <text class='time'>{{item.time}}前</text><!--发布时间-->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

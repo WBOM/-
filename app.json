@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/game/game",
+    "pages/community/community",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "pages/img/ico-1.png",
+        "selectedIconPath": "pages/img/ico-2.png"
+      },
+      {
+        "pagePath": "pages/game/game",
+        "text": "游戏库",
+        "iconPath": "pages/img/ico-3.png",
+        "selectedIconPath": "pages/img/ico-4.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "pages/img/ico-7.png",
+        "selectedIconPath": "pages/img/ico-8.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "pages/img/ico-5.png",
+        "selectedIconPath": "pages/img/ico-6.png"
+      }
+    ]
+  }
+}

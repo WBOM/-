@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view class='Lv' style='background:linear-gradient(to right,rgb(174,226,17),rgb(134,213,46)); margin-top:15rpx;'>Lv:6</view>
+      </view>
+      
+
+    </block>
+  </view>
+
+  <view class="MyMessage">
+    <view  class="MyMessageList {{currentTab_a==index ? 'active' : ''}}" data-idx="{{index}}" wx:for="{{nav}}" bindtap="navbarTap">
+      {{item}}
+    </view>
+  </view>
+  <view class='MyData'hidden="{{currentTab_a!== 0}}">
+    <view class='icon-line'>
+      <view class='icon1'>
+        <image src='https://i2.bvimg.com/672274/6c26be4654c0ec75.png' mode='scaleToFill'></image>
+        <text>任务({{1}}/3)</text>
+      </view>
+      <view class='icon2'>
+        <image src='https://i2.bvimg.com/672274/05d77980c9ff5ce3.png' mode='scaleToFill'></image>
+        <text>收藏</text>
+      </view>
+      <view class='icon3'>
+        <image src='https://i2.bvimg.com/672274/9d5c3c34ddef810d.png' mode='scaleToFill'></image>
+        <text>专题活动</text>
+      </view>
+      <view class='icon4'>
+        <image src='https://i2.bvimg.com/672274/6ff91a7f5e48ccae.png' mode='scaleToFill'></image>
+        <text>H币商城</text>
+      </view>
+    </view>
+    <view class='MySteam'>
+        <view class='MySteamInformation'>
+          <image class='headportrait' src='{{userInfo.avatarUrl}}' mode='scaleToFill'></image>
+          <text>{{userInfo.nickName}}</text>
+          <image class='stam' src='https://i2.bvimg.com/672274/e465a9f961783325.jpg' mode='scaleToFill'></image>
+          <text class='state'>{{'在线'}}</text>
+          <image class='setup' src='https://i1.bvimg.com/672274/ae7b9ccec7bdf9fe.png' mode='scaleToFill'></image>
+        </view>
+        <view class='gameinformation'>
+          <view class='gameprice'>
+            <text>￥{{1666.9}}</text>
+            <text class='gamepricetext'>游戏总价值</text>
+          </view> 
+          <view class='gamenumber'>
+            <text>{{59}}</text>
+            <text class='gamenumbertext'>游戏数量</text>
+          </view>
+          <view class='gametime'>
+            <text>{{457.3}}h</text>
+            <text class='gametimetext'>总游戏时长</text>
+          </view>
+        </view>
+    </view>
+
+    <view class='gameshow'>
+      <image src='https://i1.bvimg.com/672274/2593c5cfda106154.png' mode='scaleToFill'></image>
+      <text class='gamename'>{{'堡垒之夜：空降行动'}}</text>
+      <text class='close'>不再显示</text>
+    </view>
+    <view></view>
+  </view>
+
+</view>

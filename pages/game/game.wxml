@@ -1,0 +1,31 @@
+<!--pages/game/game.wxml-->
+<view class='nav'>
+  <view  class="navList {{currentTab_b==index ? 'active' : ''}}" data-name="{{index}}" wx:for="{{nav}}" bindtap="navbar">
+    {{item}}
+  </view>
+</view>
+
+<view class='body' hidden="{{currentTab_b!== 1}}">
+  <scroll-view  class='header' scroll-x="true">
+    <view bindtap='click' data-idx="{{index}}" class="headerList {{currentTab_a==index ? 'active' : ''}}" wx:for="{{library}}" bindtap="navbarTap">
+      {{item}}
+    </view>
+  </scroll-view>
+  <view class='box-list' hidden="{{currentTab_a!==0}}">
+    <view class='box' wx:for="{{gameList}}">
+      <view class='box-left'>
+        <image src='{{item.img}}' mode='scaleToFill'></image>
+      </view>
+      <view class='box-right'>
+        <text class='gamename'>{{item.gameName}}</text>
+        <view class='info'>
+          <view class='price'>{{item.price}}</view>
+          <view class='score' wx:if="{{item.score >=9 }}" style=' background: linear-gradient(to right, rgb(254,160,0), rgb(254,138,0));'>{{item.score}}</view>
+          <view class='score' wx:if="{{item.score >=7 && item.score < 9 }}" style='background:linear-gradient(to right,rgb(247,52,255), rgb(229,52,255))'>{{item.score}}</view>
+          <view class='score' wx:if="{{item.score < 7 && item.score > 5 }}" style='background:linear-gradient(to right,rgb(0,189,255),rgb(0,136,254))'>{{item.score}}</view>
+          <view class='score' wx:if="{{item.score < 5}}" style='background:linear-gradient(to right,rgb(174,226,17),rgb(134,213,46)'>{{item.score}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
